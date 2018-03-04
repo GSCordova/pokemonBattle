@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #d1cecc;
+}
+header{
+    background-color: #918c88;
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.titulo{
+    text-align: center;
+}
