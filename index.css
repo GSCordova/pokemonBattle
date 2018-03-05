@@ -9,6 +9,10 @@ body{
 header{
     background-color: #918c88;
 }
+#seleccionado1, #seleccionado2{
+    text-align: center;
+    width: 10rem;
+}
 .container{
     width: 90%;
     margin: 0 auto;
@@ -32,4 +36,39 @@ header{
 .empezar_batalla{
     padding: 5rem;
     text-align: center;
+}
+#listaPokemon{
+    text-align: center;
+    padding: 2rem;
+}
+#listaPokemon>ul{
+    display: inline-block;
+    margin: 0 3.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+@media (max-width: 840px){
+    #listaPokemon{
+        padding:2rem 0;
+    }
+}
+@media (max-width: 780px){
+    #listaPokemon>ul{
+        padding:0;
+        margin: 0 2.5rem;
+    }
+}
+@media (max-width: 570px){
+    #listaPokemon>ul{
+        padding:0;
+        margin: 0 1.5rem;
+    }
+}
+@media (max-width: 480px){
+    #listaPokemon>ul{
+        padding:0;
+        margin: 0 0.75rem;
+        list-style: none
+    }
 }
