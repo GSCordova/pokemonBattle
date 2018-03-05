@@ -15,45 +15,50 @@
   <section id="listaPokemon">
     <ul>
       <li class="seleccion" onclick="seleccion(event)" >Bulbasaur</li>
-      <li class="seleccion" onclick="seleccion(event)" >Jolteon</li>
+      <li class="seleccion disabled" onclick="return false" >Jolteon</li>
       <li class="seleccion" onclick="seleccion(event)" >Pikachu</li>
-      <li class="seleccion" onclick="seleccion(event)" >Ponyta</li>
-      <li class="seleccion" onclick="seleccion(event)" >Abra</li>
+      <li class="seleccion disabled" onclick="return false" >Ponyta</li>
+      <li class="seleccion disabled" onclick="return false" >Abra</li>
     </ul>
     <ul>
       <li class="seleccion" onclick="seleccion(event)" >Charmander</li>
-      <li class="seleccion" onclick="seleccion(event)" >Flareon</li>
-      <li class="seleccion" onclick="seleccion(event)" >Psyduck</li>
-      <li class="seleccion" onclick="seleccion(event)" >Gastly</li>
-      <li class="seleccion" onclick="seleccion(event)" >Mew</li>
+      <li class="seleccion disabled" onclick="return false" >Flareon</li>
+      <li class="seleccion disabled" onclick="return false" >Psyduck</li>
+      <li class="seleccion disabled" onclick="return false" >Gastly</li>
+      <li class="seleccion disabled" onclick="return false" >Mew</li>
     </ul>
     <ul>
       <li class="seleccion" onclick="seleccion(event)" >Squirtle</li>
-      <li class="seleccion" onclick="seleccion(event)" >Vaporeon</li>
-      <li class="seleccion" onclick="seleccion(event)" >Geodude</li>
-      <li class="seleccion" onclick="seleccion(event)" >Pinsir</li>
-      <li class="seleccion" onclick="seleccion(event)" >Jinx</li>
+      <li class="seleccion disabled" onclick="return false" >Vaporeon</li>
+      <li class="seleccion disabled" onclick="return false" >Geodude</li>
+      <li class="seleccion disabled" onclick="return false" >Pinsir</li>
+      <li class="seleccion disabled" onclick="return false" >Jinx</li>
     </ul>
   </section>
-  <section style="padding: 2rem;">
+  <section style="padding: 1.5rem;">
     <ul class="elegidos">
-      <li style="display: inline-block" id="seleccionado1">{Sin Elegir}</li>
-      <li style="display: inline-block">vs</li>
-      <li style="display: inline-block" id="seleccionado2">{Sin Elegir}</li>
+      <li style="display: inline-block; align-self: center;" id="seleccionado1">{Sin Elegir}</li>
+      <li class='versus' style="display: inline-block">vs</li>
+      <li style="display: inline-block; align-self: center;" id="seleccionado2">{Sin Elegir}</li>
     </ul>
     <div class="reseteos">
-        <button onclick="resetearPrimero(event)">
+        <button class="boton_personalizado" onclick="resetearPrimero(event)">
           Cambiar Pokemon
         </button>
-        <button onclick="resetearSegundo(event)">
+        <button class="boton_personalizado" onclick="resetearSegundo(event)">
           Cambiar Pokemon
         </button>
     </div>
   </section>
   <section class="empezar_batalla">
-    <button>Empezar</button>
+    <div id="empezarBoton">
+      <span>¡Comenzar Batalla!</span>
+    </div>
   </section>
+  <img id='imgIzq' class="img_pikachu" src="" alt="">
+  <img id='imgDer' class="img_lapras" src="" alt="">
 
-  <script src="index.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/pokemons.js"></script>
 </body>
 </html>
