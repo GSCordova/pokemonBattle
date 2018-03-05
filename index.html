@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>GameBoyPokemon</title>
+  <title>pokemonBattle</title>
+  <link href="https://fonts.googleapis.com/css?family=Short+Stack" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -12,7 +13,31 @@
     <h1 class="titulo">Pokemon Battle</h1>
   </header>
   <section>
-    Contenido
+    <ul>
+      <li class="seleccion" onclick="seleccion(event)" >Mew</li>
+      <li class="seleccion" onclick="seleccion(event)" >Mewtwo</li>
+      <li class="seleccion" onclick="seleccion(event)" >Jolteon</li>
+      <li class="seleccion" onclick="seleccion(event)" >Vaporeon</li>
+      <li class="seleccion" onclick="seleccion(event)" >Flareon</li>
+    </ul>
+  </section>
+  <section>
+    <ul class="elegidos">
+      <li style="display: inline-block" id="seleccionado1">{Sin Elegir}</li>
+      <li style="display: inline-block">vs</li>
+      <li style="display: inline-block" id="seleccionado2">{Sin Elegir}</li>
+    </ul>
+    <div class="reseteos">
+        <button onclick="resetearPrimero(event)">
+          Cambiar Pokemon
+        </button>
+        <button onclick="resetearSegundo(event)">
+          Cambiar Pokemon
+        </button>
+    </div>
+  </section>
+  <section class="empezar_batalla">
+    <button>Empezar</button>
   </section>
 
   <script src="index.js"></script>

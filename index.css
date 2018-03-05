@@ -4,6 +4,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #d1cecc;
+    font-family: 'Short Stack', cursive;
 }
 header{
     background-color: #918c88;
@@ -13,5 +14,22 @@ header{
     margin: 0 auto;
 }
 .titulo{
+    text-align: center;
+}
+.seleccion{
+    cursor: pointer;
+    margin: 1rem auto;
+}
+.elegidos{
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.reseteos{
+    display: flex;
+    justify-content: space-around;
+}
+.empezar_batalla{
+    padding: 5rem;
     text-align: center;
 }
