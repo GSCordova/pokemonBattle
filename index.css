@@ -26,6 +26,10 @@ header{
 .seleccion{
     cursor: pointer;
     margin: 1.25rem auto;
+    transition: 1s;
+}
+.seleccion:hover{
+    font-size: 1.20rem;
 }
 .seleccion:hover{
     color: grey;

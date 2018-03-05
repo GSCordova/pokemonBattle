@@ -8,13 +8,24 @@ const imagenDerecha = document.getElementById('imgDer')
 const innerElegir = '{Sin Elegir}'
 const empezar = document.getElementById('empezarBoton')
 
+const go = document.getElementById('letsGo')
+const listaPokemon = document.getElementById('listaPokemon')
+const general = document.getElementById('general')
+
 //Funciones Globales
 
 let basico = () => random(0, 10)
 let especial = () => random(5, 20)
 let random = (min, max) => Math.floor( Math.random() * (max - min  + 1) ) + min
-let resetearPrimero = () => primerElegido.innerHTML = innerElegir
-let resetearSegundo = () => segundoElegido.innerHTML = innerElegir
+let resetearPrimero = () => {
+    primerElegido.innerHTML = innerElegir
+    imagenDerecha.src = ''
+}
+let resetearSegundo = () => {
+    segundoElegido.innerHTML = innerElegir
+    imagenIzquierda.src = ''
+    
+}
 let seleccion = (event) => {
     if(primerElegido.innerHTML == innerElegir){
         primerElegido.innerHTML = event.target.innerHTML
@@ -39,7 +50,28 @@ let seleccion = (event) => {
             imagenIzquierda.src = squirtle.img
         }
     }
+}
 
+let acum = '0'
+
+go.addEventListener('click', ()=>{
+    listaPokemon.style.display = 'none';
+    general.style.display = 'none';
+    go.style.display = 'none';
+    setInterval(subir, 1000)
+
+})
+
+
+function subir() {
+
+    acum = parseInt(acum) +  10;
+    let superresult = acum.toString();
+    acum = acum.toString();
+    imagenIzquierda.style.bottom = superresult;
+    console.log(imagenIzquierda.style.bottom)
+    console.log('subir tira')
+    console.log('result es ' + acum)
 }
 
 /*
