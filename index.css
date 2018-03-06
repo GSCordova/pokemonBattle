@@ -29,9 +29,6 @@ header{
     transition: 1s;
 }
 .seleccion:hover{
-    font-size: 1.20rem;
-}
-.seleccion:hover{
     color: grey;
 }
 .elegidos{
@@ -58,14 +55,14 @@ header{
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 22%;
+    width: 10%;
     opacity: 0.7;
 }
 .img_lapras{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 22%;
+    width: 10%;
     opacity: 0.7;
 }
 .disabled {
@@ -102,7 +99,7 @@ header{
         padding:2rem 0;
     }
     .img_pikachu, .img_lapras{
-        width: 30%;
+        width: 20%;
     }
 }
 @media (max-width: 780px){

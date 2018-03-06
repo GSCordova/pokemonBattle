@@ -53,26 +53,40 @@ let seleccion = (event) => {
 }
 
 let acum = '0'
+let sumador = 0;
+let miIntervalo;
 
 go.addEventListener('click', ()=>{
     listaPokemon.style.display = 'none';
     general.style.display = 'none';
     go.style.display = 'none';
-    setInterval(subir, 1000)
-
+    miIntervalo = setInterval(subir, 10)
 })
 
 
-function subir() {
+//poner giro a la izquierda
 
-    acum = parseInt(acum) +  10;
-    let superresult = acum.toString();
-    acum = acum.toString();
-    imagenIzquierda.style.bottom = superresult;
-    console.log(imagenIzquierda.style.bottom)
-    console.log('subir tira')
-    console.log('result es ' + acum)
+function subir() {
+    sumador = sumador + 1;
+    if(sumador == 200) {
+        pararIntervalo();
+        ()=>{
+            imagenIzquierda.style.right = superresult + 'px';
+        }
+    } else {
+        acum = parseInt(acum) +  1;
+        let superresult = acum.toString();
+        acum = acum.toString();
+        imagenIzquierda.style.bottom = superresult + 'px';
+        console.log(imagenIzquierda.style.bottom)
+    }
 }
+
+function pararIntervalo() {
+    clearInterval(miIntervalo);
+}
+
+
 
 /*
 empezarBoton.addEventListener('click', ()=>{
