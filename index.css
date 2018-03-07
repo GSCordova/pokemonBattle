@@ -69,6 +69,18 @@ header{
     pointer-events:none; 
     opacity:0.3;         
 }
+#imgIzqFinal{
+    width: 40%;
+    display: none;
+}
+#imgDerFinal{
+    width: 40%;
+    /*position: absolute;
+    bottom: 0;
+    right: 0;*/
+    
+    display: none;
+}
 #listaPokemon{
     text-align: center;
     padding: 2rem;
@@ -92,6 +104,27 @@ header{
   .boton_personalizado:hover{
     color: #1883ba;
     background-color: #ffffff;
+  }
+
+  .campoBatalla{
+      display: none;
+      width: 350px;
+      height: 70%;
+      margin: auto auto;
+      overflow: hidden;
+      border: 1px dotted black;
+      background-color: #87A330;
+      position: relative;
+  }
+  .campoPrimero{
+      height: 50%;
+      border-bottom: 1px dotted black;
+  }
+  .campoSegundo{
+      height: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
   }
 
 @media (max-width: 840px){

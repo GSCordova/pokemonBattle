@@ -5,8 +5,11 @@ const primerElegido = document.getElementById('seleccionado1')
 const segundoElegido = document.getElementById('seleccionado2')
 const imagenIzquierda = document.getElementById('imgIzq')
 const imagenDerecha = document.getElementById('imgDer')
+const imagenDerechaF = document.getElementById('imgIzqFinal')
+const imagenIzquierdaF = document.getElementById('imgDerFinal')
 const innerElegir = '{Sin Elegir}'
 const empezar = document.getElementById('empezarBoton')
+const campoBatalla = document.getElementById('campoBatalla')
 
 const go = document.getElementById('letsGo')
 const listaPokemon = document.getElementById('listaPokemon')
@@ -31,23 +34,31 @@ let seleccion = (event) => {
         primerElegido.innerHTML = event.target.innerHTML
         if (event.target.innerHTML == 'Pikachu'){
             imagenDerecha.src = pikachu.img
+            imagenDerechaF.src = pikachu.img
         } else if (event.target.innerHTML == 'Bulbasaur'){
             imagenDerecha.src = bulbasaur.img
+            imagenDerechaF.src = bulbasaur.img
         } else if (event.target.innerHTML == 'Charmander'){
             imagenDerecha.src = charmander.img
+            imagenDerechaF.src = charmander.img
         } else if (event.target.innerHTML == 'Squirtle'){
             imagenDerecha.src = squirtle.img
+            imagenDerechaF.src = squirtle.img
         }
     } else if (segundoElegido.innerHTML == innerElegir){
         segundoElegido.innerHTML = event.target.innerHTML
         if (event.target.innerHTML == 'Pikachu'){
             imagenIzquierda.src = pikachu.img
+            imagenIzquierdaF.src = pikachu.img
         } else if (event.target.innerHTML == 'Bulbasaur'){
             imagenIzquierda.src = bulbasaur.img
+            imagenIzquierdaF.src = bulbasaur.img
         } else if (event.target.innerHTML == 'Charmander'){
             imagenIzquierda.src = charmander.img
+            imagenIzquierdaF.src = charmander.img
         } else if (event.target.innerHTML == 'Squirtle'){
             imagenIzquierda.src = squirtle.img
+            imagenIzquierdaF.src = squirtle.img
         }
     }
 }
@@ -60,7 +71,9 @@ go.addEventListener('click', ()=>{
     listaPokemon.style.display = 'none';
     general.style.display = 'none';
     go.style.display = 'none';
-    miIntervalo = setInterval(subir, 10)
+    miIntervalo = setInterval(subir, 10);
+    campoBatalla.style.display = 'block'
+    img
 })
 
 
@@ -68,16 +81,19 @@ go.addEventListener('click', ()=>{
 
 function subir() {
     sumador = sumador + 1;
-    if(sumador == 200) {
+    if(sumador == 300) {
         pararIntervalo();
-        ()=>{
-            imagenIzquierda.style.right = superresult + 'px';
-        }
+        imgDer.style.opacity = 0;
+        imgIzq.style.opacity = 0;
+        imagenIzquierdaF.style.display = 'block';
+        imagenDerechaF.style.display = 'block';
+
     } else {
         acum = parseInt(acum) +  1;
         let superresult = acum.toString();
         acum = acum.toString();
         imagenIzquierda.style.bottom = superresult + 'px';
+        imagenDerecha.style.bottom = superresult + 'px';
         console.log(imagenIzquierda.style.bottom)
     }
 }
