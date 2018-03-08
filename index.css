@@ -66,8 +66,8 @@ header{
     opacity: 0.7;
 }
 .disabled {
-    pointer-events:none; 
-    opacity:0.3;         
+    pointer-events:none;
+    opacity:0.3;
 }
 #imgIzqFinal{
     width: 40%;
@@ -78,7 +78,7 @@ header{
     /*position: absolute;
     bottom: 0;
     right: 0;*/
-    
+
     display: none;
 }
 #listaPokemon{
@@ -106,26 +106,52 @@ header{
     background-color: #ffffff;
   }
 
-  .campoBatalla{
-      display: none;
-      width: 350px;
-      height: 70%;
-      margin: auto auto;
-      overflow: hidden;
-      border: 1px dotted black;
-      background-color: #87A330;
-      position: relative;
-  }
-  .campoPrimero{
-      height: 50%;
-      border-bottom: 1px dotted black;
-  }
-  .campoSegundo{
-      height: 50%;
-      display: flex;
-      justify-content: flex-end;
-      align-items: flex-end;
-  }
+/*Luchador*/
+.barraDeVida>p{
+  margin: 0.3rem;
+  background: green;
+  border-radius: 1rem;
+}
+.ataques{
+  display: flex;
+}
+
+.luchador{
+  width: 40%;
+  border: 1px solid black;
+  background: gray;
+}
+.luchador_2{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.imagen_luchador1{
+  width: 25%;
+  height: 25%;
+}
+
+.izqii, .deree{
+  display: inline-block;
+  align-self: center;
+  width: 70%;
+  text-align: center;
+}
+.superBatalla{
+  display: none;
+  margin: 1rem auto;
+  height: 100%;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 840px){
     #listaPokemon{

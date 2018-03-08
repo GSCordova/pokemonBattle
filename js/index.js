@@ -27,7 +27,7 @@ let resetearPrimero = () => {
 let resetearSegundo = () => {
     segundoElegido.innerHTML = innerElegir
     imagenIzquierda.src = ''
-    
+
 }
 let seleccion = (event) => {
     if(primerElegido.innerHTML == innerElegir){
